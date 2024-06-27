@@ -22,14 +22,10 @@ export default function Main() {
         </div>
       </div>
       {State.data && (
-        <div className='p-4 shadow-2xl bg-lime-300  mt-4 w-64 h-64'>
+        <div className='p-4 shadow-2xl bg-lime-300  mt-4 w-64 h-auto'>
           <p className=' text-center'>📌คำใบ้📌</p>
-          <div>
-            <p className='text-2xl'>
-              <br />
-              {State.data}
-              <br />
-            </p>
+          <div className='p-4'>
+            <p className='text-2xl'>" {State.data} "</p>
           </div>
         </div>
       )}
