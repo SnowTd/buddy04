@@ -25,7 +25,7 @@ export default function Main() {
         <div className='p-4 shadow-2xl bg-lime-300  mt-4 w-64 h-auto'>
           <p className=' text-center'>📌คำใบ้📌</p>
           <div className='p-4'>
-            <p className='text-2xl'>" {State.data} "</p>
+            <p className='text-2xl'>&quot; {State.data} &quot;</p>
           </div>
         </div>
       )}
