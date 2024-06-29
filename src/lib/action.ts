@@ -33,9 +33,9 @@ export async function operaEdit(prevState: any, formData: FormData) {
   const keyword = formData.get('keyword');
   const confirm = formData.get('confirm');
   console.log(confirm);
-
+  const UID = `663210${keyword}`;
   const res = await operaFind.aggregate([
-    { $match: { SID03: keyword } },
+    { $match: { SID03: UID } },
     {
       $lookup: {
         from: 'buddies',
