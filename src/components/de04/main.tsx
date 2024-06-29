@@ -6,8 +6,8 @@ interface DataType {
   data: string;
 }
 export default function Main() {
-  const [have, setHave] = useState(true);
   const [State, setState] = useState<DataType>({ data: '' });
+
   return (
     <div>
       <div className='p-4 border rounded-lg shadow bg-gray-800 border-gray-700'>

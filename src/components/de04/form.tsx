@@ -1,16 +1,12 @@
-'use client';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 import { dataWitd4less } from '@/lib/action';
 import { useFormState } from 'react-dom';
-import { useEffect, useState } from 'react';
+import ButtonSu from '@/components/de04/ButtonSu';
 
 interface Props {
   setState: React.Dispatch<React.SetStateAction<any>>;
 }
 export default function FormComponent({ setState }: Props) {
-  const [loading, setLoading] = useState(true);
-
   const initialState = {
     message: {
       name: '',
@@ -29,9 +25,7 @@ export default function FormComponent({ setState }: Props) {
           required
         />
         <div className='flex justify-center w-full mt-4'>
-          <Button className=' bg-blue-500 hover:bg-blue-400  rounded-lg '>
-            ค้นหาคำใบ้
-          </Button>
+          <ButtonSu />
         </div>
         {State.message.name && (
           <div>

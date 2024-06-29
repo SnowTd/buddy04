@@ -15,7 +15,7 @@ export default function Homepage() {
           </Link>
         </div>
         <div className='flex justify-center mt-4 mb-4 w-f'>
-          <Link href={'/'} className='w-full'>
+          <Link href={'/for03'} className='w-full'>
             <Button className='h-12 bg-green-500 hover:bg-green-400 rounded-lg w-full'>
               <p>สำหรับพี่ DE03</p>
             </Button>
