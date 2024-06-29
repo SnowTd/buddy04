@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Kanit } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/mydesign/headerMenuUI/header';
-import Sidebar from '@/components/mydesign/headerMenuUI/sidebar';
-import { House } from 'lucide-react';
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 const kanit = Kanit({ subsets: ['latin'], weight: '400' });
@@ -23,6 +21,7 @@ export default function RootLayout({
         <div className='flex justify-center mt-[150px] w-full mb-4 container bg-[#020817]'>
           {children}
         </div>
+        <Toaster />
       </body>
     </html>
   );

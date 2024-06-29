@@ -95,7 +95,7 @@ export async function editHints(prevState: any, formData: FormData) {
   };
 }
 
-export async function sendMail(formData: FormData) {
+export async function sendMail(preveState: any, formData: FormData) {
   const email = formData.get('email');
   const send = email?.toString();
   const { EMAIL, EMAIL_PASS } = process.env;
@@ -111,7 +111,9 @@ export async function sendMail(formData: FormData) {
     const testResult = await transport.verify();
   } catch (error) {
     console.log(error);
-    return;
+    return {
+      message: 'error'
+    };
   }
   try {
     const result = await transport.sendMail({
@@ -121,8 +123,9 @@ export async function sendMail(formData: FormData) {
       html: '<p>คลิกรูปเพื่อเข้าสู่ website ได้เลย</p><a href="https://buddy04.vercel.app/" ><img src="https://img2.pic.in.th/pic/af46c6e9ebc81c9a8fe4bbcfa981d3ce.png" width="500" height="500" border="0" alt="IMG-20220904-121314" /></a>'
     });
     console.log('success');
+    return { message: 'success' };
   } catch (error) {
     console.log(error);
-    return;
+    return { message: 'error' };
   }
 }
