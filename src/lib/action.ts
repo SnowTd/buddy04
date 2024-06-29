@@ -118,7 +118,7 @@ export async function sendMail(formData: FormData) {
       from: EMAIL,
       to: send,
       subject: 'เชื่อมสัมพันธ์สายรหัสพี่น้องDE',
-      html: '<a href="https://buddy04.vercel.app/" ><img src="https://img2.pic.in.th/pic/Screenshot-2024-06-29-200044.png" width="500" height="500" border="0" alt="IMG-20220904-121314" /></a>'
+      html: '<p>คลิกรูปเพื่อเข้าสู่ website ได้เลย</p><a href="https://buddy04.vercel.app/" ><img src="https://img2.pic.in.th/pic/af46c6e9ebc81c9a8fe4bbcfa981d3ce.png" width="500" height="500" border="0" alt="IMG-20220904-121314" /></a>'
     });
     console.log('success');
   } catch (error) {
